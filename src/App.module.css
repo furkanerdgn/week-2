@@ -1,0 +1,103 @@
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4em;
+    background: #e6e6e6;
+    color: #4d4d4d;
+}
+form{
+    margin:  0px auto;
+    text-align: left;
+
+}
+h1{
+    color: rgba(175, 47, 47, 0.15);
+    font-size: 100px;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+}
+input{
+  text-align: left;
+	font-weight: 300;
+  width: 100%;
+  font-size: 24px;
+  padding: 16px 16px 16px 60px;
+	border: none;
+	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+input::-webkit-input-placeholder{
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  color: #e6e6e6;
+}
+input:focus{
+  outline: none;
+}
+.todoLabel{
+  position: relative;
+}
+.listSvg{
+  position: absolute;
+  fill: #e6e6e6;
+  margin-top: 20px;
+  height: 1.5rem;
+  left: 20px;
+  width: 1.5rem;
+}
+main{
+  min-width: 260px;
+  max-width: 550px;
+}
+.bottomButtons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+button{
+  margin: 0;
+  padding: 2px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+button:active{
+  border: 1px solid rgba(175, 47, 47, 0.15);
+}
+.lastbutton{
+  border: none; 
+  color: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.lastbutton:hover{
+  text-decoration: underline;
+}
