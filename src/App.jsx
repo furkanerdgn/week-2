@@ -11,6 +11,8 @@ function App() {
   const [filteredTodos, setFilteredTodos] = useState([])
 
 
+
+   //handle form submit
   const handleFormSubmit = (e) => {
     e.preventDefault()
     if(!todo.trim())return;
@@ -27,25 +29,26 @@ function App() {
 
   }, [todos])
 
-
+  //handle active todos
   const handleActive = () => {
     setFilteredTodos(todos.filter(todo => !todo.completed))
   }
 
+  //handle completed todos
   const handleCompleted = () => {
     setFilteredTodos(todos.filter(todo => todo.completed))
   }
-
+  //handle all todos
   const handleAll = () => {
     setFilteredTodos(todos)
   }
 
-
+  //handle clear completed todos
   const handleClearClick = () => {
     setTodos(todos.filter(todo => !todo.completed))
 
   }
-
+  //handle check all todos
   const checkAll = () => {
     const newTodos = todos.map((todo) => {
       todo.completed = true
@@ -54,7 +57,6 @@ function App() {
     setTodos(newTodos)
   }
   
-
 
   return (
     <div className={styles.App}>

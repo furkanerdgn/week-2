@@ -59,3 +59,8 @@ input[type="checkbox"]:checked + label{
 .deleteBtn:hover{
     color: #af5b5e;
 }
+.inputTodo{
+    background-color: transparent;
+    box-shadow: none;
+    padding: unset;
+}

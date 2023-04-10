@@ -6,12 +6,13 @@ function Card(props) {
     const [updatedTodo, setUpdatedTodo] = useState('')
     const [deleteTodo, setDeleteTodo] = useState(false)
 
-
+    // handle delete todo
     const handleDelete = (e) => {
         const {id} = e.target
         const newTodos = props.todos.filter((todo) => todo.id !== id)
         props.setTodos(newTodos)
     }
+    // handle check todo
     const handleChange = (e) => {
         const {id} = e.target
         const newTodos = props.todos.map((todo) => {
@@ -22,7 +23,11 @@ function Card(props) {
         })
         props.setTodos(newTodos)
     }
-
+    // handle update todo
+    const handleChangeTodo = (e) => {
+        const {value} = e.target.value
+        setUpdatedTodo(value)
+    }
 
   return (
     <div className={styles.card}>
@@ -36,7 +41,7 @@ function Card(props) {
                             checked={todo.completed}
                             name="todo" id={todo.id} />
                             <label htmlFor="checkbox">
-                            <input type="text" className={styles.input} value={todo.todo} onChange={(e) => setUpdatedTodo(e.target.value)} />
+                                {todo.todo}
                             </label>
                             <button onClick={handleDelete} id={todo.id} className={styles.deleteBtn}>X</button>
                         </li>
