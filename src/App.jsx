@@ -46,6 +46,14 @@ function App() {
 
   }
 
+  const checkAll = () => {
+    const newTodos = todos.map((todo) => {
+      todo.completed = true
+      return todo
+    })
+    setTodos(newTodos)
+  }
+  
 
 
   return (
@@ -54,7 +62,7 @@ function App() {
       <h1 className={styles.header}>todos</h1>
       <form onSubmit={handleFormSubmit}>
         <label className={styles.todoLabel} htmlFor="todo">
-          <img src={chevron} className={styles.listSvg} alt="chevron" />
+          <img src={chevron} className={styles.listSvg} onClick={checkAll} alt="chevron" />
         <input type='text' name="todo" value={todo} onChange={(e)=>setTodo(e.target.value)} placeholder='What needs to be done?' />
         </label>
       </form>
@@ -64,10 +72,10 @@ function App() {
      }
      <section className={styles.bottomButtons}>
         <p>{todos.length} items left</p>
-        <div className={styles.buttons}>
-            <button onClick={handleAll}>All</button>
-            <button onClick={handleActive}>Active</button>
-            <button onClick={handleCompleted}>Completed</button>
+        <div className={styles.buttons}>   
+            <button id={styles["all"]} onClick={handleAll}>All</button>
+            <button id={styles["active"]} onClick={handleActive}>Active</button>
+            <button id={styles["completed"]} onClick={handleCompleted}>Completed</button>
         </div>
         <button className={styles.lastbutton} onClick={handleClearClick}>Clear Completed</button>
 

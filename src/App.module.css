@@ -51,6 +51,7 @@ input:focus{
 }
 .listSvg{
   position: absolute;
+  filter: opacity(0.4);
   fill: #e6e6e6;
   margin-top: 20px;
   height: 1.5rem;
@@ -88,9 +89,6 @@ button{
   -moz-appearance: none;
   appearance: none;
 }
-button:active{
-  border: 1px solid rgba(175, 47, 47, 0.15);
-}
 .lastbutton{
   border: none; 
   color: inherit;
@@ -100,4 +98,16 @@ button:active{
 }
 .lastbutton:hover{
   text-decoration: underline;
+}
+.listSvg:hover{
+  filter: opacity(1);
+}
+#all:hover{
+  border: 1px solid rgba(175, 47, 47, 0.15);
+}
+#active:hover{
+  border: 1px solid rgba(175, 47, 47, 0.15);
+}
+#completed:hover{
+  border: 1px solid rgba(175, 47, 47, 0.15);
 }
